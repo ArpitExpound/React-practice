@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class IndecisionApp extends React.Component {
+  render() {
+    return (
+      <div>
+        <Header />
+        <Action />
+        <Options />
+      </div>
+    );
+  }
 }
 
-export default App;
+  class Header extends React.Component {
+    render() {
+      return (
+        <div>
+          <h1>Indecision</h1>
+          <h2>Put your life in the hands of a computer</h2>
+        </div>
+      );
+    }
+  }
+
+  class Action extends React.Component {
+    render() {    
+      return (
+        <div>
+          <button>What should I do?</button>
+        </div>
+      );
+    }
+  }
+
+  class Options extends React.Component {
+    render() {    
+      return (
+        <div>
+          Options Component here
+        </div>
+      );
+    }
+  }
+
+export default IndecisionApp;
